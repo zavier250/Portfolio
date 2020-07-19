@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Zavier's Base</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Referencing from https://www.jqueryscript.net/slideshow/Responsive-Image-Cover-Flow-Plugin-with-jQuery-CSS3-flipster.html -->
+        <link rel="stylesheet" href="css/jquery.flipster.min.css">
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <!-- Referencing from https://www.jqueryscript.net/slider/Responsive-Thumbnail-Carousel-camRoll-Slider.html -->
+        <link rel="stylesheet" href="css/camroll_slider.css">
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Rajdhani|Righteous|Roboto|Staatliches|Teko&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="topbar">
+                <ul>
+                    <li id="menu-left">
+                        <button id="nav-pop-button" class="subnavbtn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="40" height="40"
+                        viewBox="0 0 172 172"
+                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g  id="menu-icon" fill="#00cccc"><path d="M0,25.8v17.2h172v-17.2zM0,77.4v17.2h172v-17.2zM0,129v17.2h172v-17.2z"></path></g></g></svg></button>
+                        <ul id="menu" class="subnav-content">
+                                <li><a href="#cover">Cover</a></li>
+                                <li><a href="#aboutme">About Me</a></li>
+                                <li><a href="#ass-reflection">Assignment Reflection</a></li>
+                                <li><a href="#course-reflection">Course Reflection</a></li>
+                                <li><a href="#other-work">Other Work</a></li>
+                        </ul>
+                        <div class="float-clear"></div>
+                    </li>                   
+                    <li id="followme">
+                        <p>
+                            <strong>Follow Me</strong><br>
+                            <a href="https://www.facebook.com/ZavierXu250">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="40" height="40"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc" id="facebook"><path d="M86,10.32c-41.796,0 -75.68,33.884 -75.68,75.68c0,37.9432 27.95,69.27128 64.36928,74.74432v-54.68568h-18.72392v-19.89352h18.72392v-13.23712c0,-21.91624 10.67776,-31.53792 28.89256,-31.53792c8.72384,0 13.33688,0.64672 15.52128,0.94256v17.36512h-12.42528c-7.73312,0 -10.43352,7.33064 -10.43352,15.59352v10.87384h22.66272l-3.07536,19.89352h-19.58736v54.84736c36.93872,-5.01208 65.43568,-36.59472 65.43568,-74.906c0,-41.796 -33.884,-75.68 -75.68,-75.68z"></path></g></g></svg>
+                            </a>
+                            <a href="https://www.instagram.com/zavier250/">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="40" height="40"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc" id="instagram"><path d="M41.28,10.32c-17.0624,0 -30.96,13.8976 -30.96,30.96v89.44c0,17.0624 13.8976,30.96 30.96,30.96h89.44c17.0624,0 30.96,-13.8976 30.96,-30.96v-89.44c0,-17.0624 -13.8976,-30.96 -30.96,-30.96zM130.72,27.52h10.32c1.892,0 3.44,1.548 3.44,3.44v10.32c0,1.892 -1.548,3.44 -3.44,3.44h-10.32c-1.892,0 -3.44,-1.548 -3.44,-3.44v-10.32c0,-1.892 1.548,-3.44 3.44,-3.44zM86,34.4c18.3352,0 34.46773,9.632 43.61813,24.08h14.86187v68.8c0,9.4944 -7.7056,17.2 -17.2,17.2h-82.56c-9.4944,0 -17.2,-7.7056 -17.2,-17.2v-68.8h14.86187c9.1504,-14.448 25.28293,-24.08 43.61813,-24.08zM86,41.28c-24.6648,0 -44.72,20.0552 -44.72,44.72c0,24.6648 20.0552,44.72 44.72,44.72c24.6648,0 44.72,-20.0552 44.72,-44.72c0,-24.6648 -20.0552,-44.72 -44.72,-44.72zM86,55.04c17.0624,0 30.96,13.8976 30.96,30.96c0,17.0624 -13.8976,30.96 -30.96,30.96c-17.0624,0 -30.96,-13.8976 -30.96,-30.96c0,-17.0624 13.8976,-30.96 30.96,-30.96z"></path></g></g></svg>
+                            </a>
+                            
+                        </p>
+                    </li>
+                    <li id="gettouch">
+                            <p>
+                                <strong>Get In Touch</strong><br>
+                                (+61) 0413916210
+                            </p>
+                        </li>
+                        <div class="float-clear"></div>
+                </ul>
+                <div class="float-clear"></div>
+            </div>
+        </header>
+        <!-- Fullpage templete references from https://www.youtube.com/watch?v=wNK4WE7MGGA&t=2s -->
+        <div class="smooth">
+            <section id="cover">
+                <!-- Referencing from https://tympanus.net/Development/AnimatedHeaderBackgrounds/ -->
+                <canvas id="canvas"></canvas>
+                <div id="cover-content">
+                        <h1 id="cover-title">Z.A.V.I.E.R</h1>
+                        <h2>P O R T F O L I O</h2>
+                </div>
+                <div id="cover-button">
+                    <!-- Button style references from https://tympanus.net/Development/ButtonStylesInspiration/ -->
+                    <a class="button button--ujarak button--border-thin button--text-thick" href="#aboutme" id="explore-btn">Explore</a>
+                </div>
+                <div class="float-clear"></div>
+            </section>
+            <section id="aboutme">
+                <h1 id="ab-title">A B O U T &nbsp&nbsp  M E</h1>
+                <div id="ab-content">
+                    
+                    <div class="float-left">
+                        <div class="img-hover">
+                            <div class="img-text">
+                                <h2>I am MINGCHAO XU</h2>
+                                <h2>You can call me Zavier.</h2>
+                            </div>
+                            <!--Image style inspired by http://www.fold.studio/offline/anagram/ -->
+                            <img src="img/BBB.jpeg" alt="Zavier" id="myphoto">
+                        </div>     
+                    </div>
+                    <div class="float-right">
+                        <p>
+                            I am an IT master student interested in visual effect and aesthetic. I am crazy about sci-fi movies so   I like designing my work in Cyberpunk style. My favourite interface design is Tony Stark's AI system interface. Although the functions of Iron Man's AI system is too difficult to achieve at present, the dynamic elements on that interface make me feel like the system can communicate with me. So in this portfolio, I implement my favourite design style.
+                        </p>
+                        <p>
+                            Until now I have learned much IT knowledge in these two semesters. I can do both front-end and back-end work because I found it is not much difficult to understand the logic of code. However, I am weak in conprehending conceptual knowledge which results that I will be confused when making a plan for a whole project. But through the practicals in DECO courses, I participated in the amazing process of how a project from a idea develop into a final work, and it is undeniable that it brings me a sense of achievement, and this feeling will encourage me to keep going.                       
+                        </p>                        
+                    </div>
+                    <div class="float-clear"></div>
+                    
+                </div>
+                <div class="nextpage">
+                    <a href="#ass-reflection">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="70" height="70"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc" class="next-icon"><path d="M31.99805,29.0306l-10.24609,10.02214l64.23405,65.5638l64.24805,-65.21387l-10.2181,-10.05013l-54.00195,54.8138zM140.07194,71.06478l-54.11393,53.80599l-54.07194,-52.95215l-10.02214,10.2461l64.17806,62.84831l64.13607,-63.78614z"></path></g></g></svg>
+                    </a>
+                </div>
+                
+            </section>
+            <section id="ass-reflection">
+                <h1 id="ass-title">A S S I G N M E N T &nbsp&nbsp R E F L E C T I O N</h1>
+                <div id="ass-content">
+                    <ul id="ass-ul">
+                        <li>
+                            <a href="design-exploration.html" id="de-button">
+                                <div class="img-hover">
+                                <div class="img-text">
+                                    <h2>Design Exploration</h2>
+                                </div>
+                                <img src="img/poster.png" alt="design exploration" class="ass-img">
+                            </div>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="major-project.html" id="mp-button">
+                                <div class="img-hover">
+                                <div class="img-text">
+                                        <h2>Major <br> Project</h2>
+                                </div>
+                                <img src="img/brs.jpeg" alt="design exploration" class="ass-img">
+                            </div>
+                            </a>
+                              
+                        </li>
+                        <li>
+                            <a href="participation-and-journal.html" id="pj-button">
+                                <div class="img-hover">
+                                <div class="img-text">
+                                    <h2>Participation <br> And <br> Journal</h2>
+                                </div>
+                                <img src="img/journal.png" alt="design exploration" class="ass-img">
+                            </div>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="portfolio-content.html" id="pc-button">
+                                <div class="img-hover">
+                                <div class="img-text">
+                                    <h2>Portfolio</h2>
+                                </div>
+                                <img src="img/portfolio.jpeg" alt="design exploration" class="ass-img">
+                            </div>
+                            </a>
+                            
+                        </li>
+                        <div class="float-clear"></div>
+                    </ul>
+                    
+
+                    <div id="design-exploration-popup">
+                        <div class="popup-header">
+                            <a href="portfolio.html" id="close-pop"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="50" height="50"
+                            viewBox="0 0 172 172"
+                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="close-icon" fill="#00cccc"><path d="M52.03,42.2475l-9.7825,9.7825l34.185,33.97l-34.185,33.97l9.7825,9.7825l34.185,-33.97l34.185,33.97l9.675,-9.7825l-34.0775,-33.97l34.0775,-33.97l-9.675,-9.7825l-34.185,33.97z"></path></g></g></svg></a>
+                            <h1>D E S I G N &nbsp&nbsp E X P L O R A T I O N</h1>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="top-line">
+                            <div class="line-left"></div>
+                            <div class="line-right"></div>
+                        </div>    
+                        
+                        <div class="popup-content">
+                            <div>
+                                <div class="float-left no-margin">
+                                    <img src="img/poster.png" alt="" id="de-pop-img1">
+                                    <div id="de-target-audience">
+                                        <h2 class="popup-subtitle">T a r g e t &nbsp&nbsp A u d i e n c e</h2>
+                                        <p>
+                                            As this topic is related to culture and history and is extended from language, so the target audiences of this topic are the young adults. To be exact, the people who are at the age group between 12 to 30. 
+                                        </p>
+                                        <p>
+                                            On one hand, most of these young adults are well educated so that they have the comprehensive ability on this aboriginal culture. On the other hand, because young adults are usually creative, they can apply these culture to their daily life such as their online chatting. In fact, although some content of these aboriginal cultures may seem out of date, they are still worth to be remembered as a cultural heritage. In modern society, while the life pace is becoming faster than before, if some thing can be spread in our daily life, then it has the chance to be a pop culture.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="float-right">
+                                    <h2 class="popup-subtitle">C O O E E</h2>
+                                    <p>
+                                        The idea of COOEE is from a movie called Wind Talker. This movie describes a true story that in WWII, the Indians used their language to help the US army pass military intelligence in order to prevent the enemies from understanding the content of information even if they had intercepted it. My idea was to create an encryption system  by using the data set of Aboriginal and Torres Strait Islander languages word lists from SLQ. But this system is only for recreation only instead of formal working purpose. I hope in this way, audiences' interest on aboriginal culture will be stimulated, promoting the inheritance of these various and unique culture.
+                                    </p>
+                                    <h2 class="popup-subtitle">I n t e r a c t i o n</h2>
+                                    <p>
+                                            The encryption system can translate user’s input into various aboriginal languages. It may looks like a dictionary, but my purpose is for users to use the aboriginal languages in their daily life. Actually, although the encryption  system is not suitable for working or commercial purpose because of its public data source, it can be used in some entertainment aspect. For example, creating a riddle or a treasure map.
+                                    </p>
+                                    <div class="de-pop-img-frame">
+                                        <!-- Slider show references from https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+                                        <!-- Slideshow container -->
+                                            <div class="slideshow-container">
+
+                                                    <!-- Full-width images with number and caption text -->
+                                                    <div class="mySlides fade">
+                                                    <div class="numbertext">1 / 2</div>
+                                                    <img src="img/encryption-sys.png" style="width:100%">
+                                                    <div class="text"></div>
+                                                    </div>
+                                                
+                                                    <div class="mySlides fade">
+                                                    <div class="numbertext">2 / 2</div>
+                                                    <img src="img/encryption-sys2.png" style="width: 100%">
+                                                    <div class="text"></div>
+                                                    </div>
+                                            
+                                                
+                                                    <!-- Next and previous buttons -->
+                                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                                </div>
+                                                <br>
+                                                
+                                                <!-- The dots/circles -->
+                                                <div style="text-align:center">
+                                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                                </div>
+                                    </div>
+                                    <p>
+                                        The other way I think can make the aboriginal language popular is to make a  sticker generator. the concept comes from that many Chinese dialogue words are widely used in online chatting. In this way, although most Chinese speak mandarin in daily life, the dialogues from different parts of China are inherited. As stickers and emojis are very popular in online chatting , if aboriginal languages and funny images can be combined to generate stickers and these stickers can be applied to people's social contact on Internet, the aboriginal languages will be known by more people.
+                                    </p>
+                                    <div class="popup-single-img">
+                                        <img src="img/sticker-gen.png" alt="sticker generator">
+                                    </div>
+                                </div>
+                                <div class="float-clear"></div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="bottom-line">
+                                <div class="b-line-left"></div>
+                                <div class="b-line-right"></div>
+                                <div class="float-clear"></div>
+                            </div>  
+                    </div>
+                    <div id="major-project-popup">
+                            <div class="popup-header">
+                                    <a href="portfolio.html" id="close-pop"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="50" height="50"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="close-icon" fill="#00cccc"><path d="M52.03,42.2475l-9.7825,9.7825l34.185,33.97l-34.185,33.97l9.7825,9.7825l34.185,-33.97l34.185,33.97l9.675,-9.7825l-34.0775,-33.97l34.0775,-33.97l-9.675,-9.7825l-34.185,33.97z"></path></g></g></svg></a>
+                                    <h1>M A J O R &nbsp&nbsp P R O J E C T</h1>
+                                    <div class="float-clear"></div>
+                                </div>
+                                <div class="top-line">
+                                    <div class="line-left"></div>
+                                    <div class="line-right"></div>
+                                </div>   
+                            <div class="popup-content">
+                                <div class="float-left no-margin">
+                                    <img src="img/brs.jpeg" alt="Brisbane Reading Spots" id="mp-pop-img1">
+                                    <h2 class="popup-subtitle">T a r g e t &nbsp&nbsp A u d i e n c e</h2>
+                                    <p class="pop-left-content">
+                                        This website is for people who are looking for a suitable reading spot, so anyone with this need can be our potential target audience. For example, parents can take their children to the reading point to accompany the learning process. Older people can go to the library to participate in some exciting social activities. Professionals can go to the library to access materials and participate in lectures. In short, as long as they are people who like to read, our website can provide them with different functions.
+                                    </p>
+                                    <p class="pop-left-content">
+                                        To be more specific, we believe our main target audience is white-collar workers and students who like to read. For workers, a library is a significant place. Based on the fierce competition in employment nowadays, workers also need to continue to learn in their free time in order to maintain their high employment value. Secondly, unlike students, students can enjoy the preferential treatment and quiet environments of the school library, such as free entry and free lending. It is difficult for workers to find a suitable reading place during work or free time. In addition, the website also provides event browsing, which provides users many opportunities to extend their social circle and know more like-minded friends.
+                                    </p>
+                                </div>
+                                <div class="float-right">
+                                    <h2 class="popup-subtitle">B R I S B A N E &nbsp&nbsp R E A D I N G &nbsp&nbsp S P O T S</h2>
+                                    <p>
+                                        Brisbane Reading Spots is a website which is designed for convenient reading lovers to find reading spots in Brisbane. Since with the life pace accelerated by the technology revolution, reading, a good habit, is gradually being replaced by other entertainment. Thus, in order to promote individual improvement through reading, we want to do some effort to make reading become popular again.
+                                    </p>
+                                    <h2 class="popup-subtitle">M A I N &nbsp&nbsp F U N C T I O N S</h2>
+                                    <p>
+                                        The main function of this website is to provide available reading spots for our users. Reading spots can be libraries, bookstores and even cafe. So we implement API of public libraries data set from SLQ which provides detailed information of libraries in Queensland. According to the geographic location provided by API, we filter the libraries within 200 KM of Brisbane, which are the data we apply for our website. 
+                                    </p>
+                                    <p>
+                                        We made a search bar which allows users to search the libraries through input key words and narrowing the range of their current locations to filter the nearest libraries. All the libraries searched will be listed below the search bar. When a user click a library, the page will turn to a specific library page  which only illustrates the detail of the library they choose. In order to achieve this, we used PHP Session so that the information in previous page can be passed to the current page.
+                                    </p>
+                                    <p>
+                                        On our homepage, we set a map which labeled all the libraries in our selected data.  The basic information of these libraries will be represented when labels are clicked. Additionally, we made some simulate content such as the recommendation of various kinds of reading spots, rating and comment functions, event recommendation and blog collection. These are what we planned to do in the future because of our technical and resource limitation. Our current MVP is to achieve the functions based on API, and we did it.
+                                    </p>
+                                    <h2 class="popup-subtitle">M Y &nbsp&nbsp C O N T R I B U T I O N</h2>
+                                    <p>
+                                        I participated in the whole process of our web development, but I mainly focused on PHP work in our team. Since PHP has more potential than html on functionality, we developed our main pages in PHP language. Based on our workshop's example, I made our website's structure by using PHP. Thus, when users are at a specific page, the menu will show its web location by displaying the page label in different colours, which can be seen as a navigation method.
+                                    </p>
+                                    <p>
+                                        The biggest difficulty I met in making PHP pages is to pass information from one page to another page. We want this function in Search page and library pages. Through PHP session, since a library button has been clicked, its unique id named by the library’s name will be acquired, then the id’s content will be passed to the library’s page through PHP Session. After that, when the library page gets the name of library(the id content), through filtering API content, the web only display the data which belongs to the user-selected library. The advantage of using PHP session is that before we implement database for our website, we can directly filter and present the external resource based on user’s choice. Thus, we do not need to make a page for each library.
+                                    </p>
+                                    <h2 class="popup-subtitle">E X P E C T I O N</h2>
+                                    <p>
+                                        From my view, our project is a successful practical because we implement what we learned on our website, like API and PHP technology. Besides, the website is practical since it can truly let users find libraries in Brisbane. When we do our project, we reference some place-recommendation website like YELP and Zomato, so our web structure is more like a modern place-recommendation website. Initially, we were going to make our website in mobile device size, but considering that demonstration will be more clear on a laptop, we finally changed it into a computer version.
+                                    </p>
+
+                                </div>
+                                <div class="float-clear"></div>
+                                <div class="top-line"></div>
+                                <div>
+                                    <h2 class="popup-subtitle">P A R T &nbsp&nbsp A : &nbsp&nbsp D E S I G N &nbsp&nbsp E X P L O R A T I O N</h2>
+                                    <p>
+                                        In this stage, we generated the idea of our project basd on the API from SLQ including the purpose and type of our project. Firstly, we did a research through referencing similar types of applications and interviewing our target audiences. The result indicated that in modern society, when people spending more time on entertainment than reading, for reading lovers, quiet and confort reading places are in great demand. Under this circumstance, I think our purpose of finding reading spots is necessary and reasonable. 
+                                    </p>
+                                    <p>
+                                        Then, we accomplished our work division. My work is to construct the structure of our websit and create the sitemap. Based on the initial sitemap, our designer designed the wireframes and high fidelity prototypes.
+                                    </p>
+                                    <p>
+                                        At the end of this stage, we had more high fidelity prototype.
+                                    </p>
+                                    <div id="sitemap">
+                                            <h3>O R I G I N A L &nbsp&nbsp S I T E M A P</h3>
+                                            <img src="https://i.imgur.com/bXlvBTP.jpg" alt="">
+                                        </div>
+                                    <div id="mp-a-imgbox">
+                                        <h3>W I R E F R A M E S</h3>
+                                        <img src="https://i.imgur.com/bgBwJz6.jpg" alt="">
+                                        <img src="https://i.imgur.com/4PJkxKY.jpg" alt="">
+                                        <img src="https://i.imgur.com/mguF5Hm.jpg" alt="">
+                                        <img src="https://i.imgur.com/WB5Ib03.jpg" alt="">
+                                </div>
+                                    
+                                    <h3 id="ptype-title">P R O T O T Y P E</h3>
+                                    <div id="prototype">
+                                            <div class="mp-pop-img-frame">
+                                                    <!-- // Slider show references from https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+                                                    <!-- Slideshow container -->
+                                                        <div class="slideshow-container2">
+            
+                                                                <!-- Full-width images with number and caption text -->
+                                                                <div class="mySlides2 fade2">
+                                                                <div class="numbertext2"></div>
+                                                                <img src="https://i.imgur.com/aD73sMf.jpg">
+                                                                <div class="text"></div>
+                                                                </div>
+                                                            
+                                                                <div class="mySlides2 fade2">
+                                                                <div class="numbertext2"></div>
+                                                                <img src="https://i.imgur.com/VXJqGp5.jpg">
+                                                                <div class="text"></div>
+                                                                </div>
+
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext2"></div>
+                                                                    <img src="https://i.imgur.com/L4yyIR0.jpg">
+                                                                    <div class="text"></div>
+                                                                </div>
+
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext2"></div>
+                                                                    <img src="https://i.imgur.com/cRwQYpy.jpg">
+                                                                    <div class="text"></div>
+                                                                </div>
+                                                                
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext2"></div>
+                                                                    <img src="https://i.imgur.com/bGlnw63.jpg">
+                                                                    <div class="text"></div>
+                                                                </div> 
+                                                                
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext2"></div>
+                                                                    <img src="https://i.imgur.com/CgmpV3b.jpg">
+                                                                    <div class="text"></div>
+                                                                </div> 
+
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext2"></div>
+                                                                    <img src="https://i.imgur.com/Bi5dFsW.jpg">
+                                                                    <div class="text"></div>
+                                                                </div> 
+
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext"></div>
+                                                                    <img src="https://i.imgur.com/IrWBMhs.jpg">
+                                                                    <div class="text"></div>
+                                                                </div>
+
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext"></div>
+                                                                    <img src="https://i.imgur.com/4oTBlqr.jpg">
+                                                                    <div class="text"></div>
+                                                                </div>
+
+                                                                <div class="mySlides2 fade2">
+                                                                    <div class="numbertext"></div>
+                                                                    <img src="https://i.imgur.com/La6EynC.jpg">
+                                                                    <div class="text"></div>
+                                                                </div>
+                                                        
+                                                            
+                                                                <!-- Next and previous buttons -->
+                                                                <div class="control">
+                                                                    <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                                                                    <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <br>
+                                                            
+                                                            <!-- The dots/circles -->
+                                                            <div style="text-align:center">
+                                                                <span class="dot2" onclick="currentSlide(1)"></span>
+                                                                <span class="dot2" onclick="currentSlide(2)"></span>
+                                                                <span class="dot2" onclick="currentSlide(3)"></span>
+                                                                <span class="dot2" onclick="currentSlide(4)"></span>
+                                                                <span class="dot2" onclick="currentSlide(5)"></span>
+                                                                <span class="dot2" onclick="currentSlide(6)"></span>
+                                                                <span class="dot2" onclick="currentSlide(7)"></span>
+                                                                <span class="dot2" onclick="currentSlide(8)"></span>
+                                                                <span class="dot2" onclick="currentSlide(9)"></span>
+                                                                <span class="dot2" onclick="currentSlide(10)"></span>
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    
+                                    <div class="top-line"></div>
+                                    
+                                    <div class="vertical-centre">
+                                        <div class="float-left no-margin">
+                                           <h2 class="popup-subtitle">P A R T &nbsp&nbsp B : &nbsp&nbsp D E M O</h2> 
+                                            <p>
+                                                In part B, we made our initial demo in mobile size. In this demo, we achieved the basic functions through using API. At this stage, our coder used API and GPS plugin to filter the libraries in Brisbane area. Besides, I used JavaScript to add id for each library button once they were generated. Although at that time, we didn't have extra page to illustrate the chosen library's information, but the search page would hide other non-selected library buttons and expand more information of the selected library in its button, which is our original way to distinguish the user's choice from the rest of data.
+                                            </p>
+                                            <p>
+                                                Additionally, the hierarchical layout of our website was decided. By using this layout, our website can display like a mobile application. 
+                                            </p>
+                                        </div>
+                                        <div class="float-right">
+                                            <img src="https://i.imgur.com/RHZ1yWh.png" alt="demo" id="mp-pop-img2">   
+                                        </div>
+                                        <div class="float-clear"></div>
+                                    </div>
+                                    
+                                    
+                                    <div class="top-line"></div>
+                                    <h2 class="popup-subtitle">P A R T &nbsp&nbsp C : &nbsp&nbsp D E V E L O P M E N T</h2>
+                                    <p>
+                                        In the final stage, we optimized our existing functions and finished our final version of this website. In this period, I have worked out the PHP session so that information transmition between pages was achieved. 
+                                    </p>
+                                    <div id="mp-c-imgbox">
+                                        <figure>
+                                            <img src="img/ori-lib-page.jpeg" alt="original library page">
+                                            <h4> Original Library Page</h4>
+                                        </figure>
+                                            <div class="evolution">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                    width="50" height="50"
+                                                    viewBox="0 0 172 172"
+                                                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc"><path d="M86,30.96c-0.48375,0 -0.94062,0.12094 -1.3975,0.3225l-75.68,34.4c-1.22281,0.55094 -2.0425,1.77375 -2.0425,3.1175v20.64c0,1.16906 0.63156,2.27094 1.6125,2.9025c0.98094,0.63156 2.16344,0.69875 3.225,0.215l74.2825,-33.755l74.2825,33.755c0.45688,0.215 0.91375,0.3225 1.3975,0.3225c0.645,0 1.26313,-0.17469 1.8275,-0.5375c0.98094,-0.63156 1.6125,-1.73344 1.6125,-2.9025v-20.64c0,-1.34375 -0.80625,-2.56656 -2.0425,-3.1175l-75.68,-34.4c-0.45687,-0.20156 -0.91375,-0.3225 -1.3975,-0.3225zM86,79.12c-0.48375,0 -0.94062,0.12094 -1.3975,0.3225l-75.68,34.4c-1.22281,0.55094 -2.0425,1.76031 -2.0425,3.1175v20.64c0,1.16906 0.63156,2.27094 1.6125,2.9025c0.98094,0.63156 2.16344,0.71219 3.225,0.215l74.2825,-33.755l74.2825,33.755c0.45688,0.215 0.91375,0.3225 1.3975,0.3225c0.645,0 1.26313,-0.17469 1.8275,-0.5375c0.98094,-0.63156 1.6125,-1.73344 1.6125,-2.9025v-20.64c0,-1.35719 -0.80625,-2.56656 -2.0425,-3.1175l-75.68,-34.4c-0.45687,-0.20156 -0.91375,-0.3225 -1.3975,-0.3225z"></path></g></g></svg>
+                                            </div>
+                                        <figure>
+                                            <img src="img/final-lib-page.jpeg" alt="final library page">
+                                            <h4>Final Library Page</h4>
+                                        </figure>                                        
+                                    </div>
+                                    <p>
+                                        At the same time, we added map on our homepage which can show the libraries' geographic locations. Then, since we finished all the main functions, we began to decorate the web by CSS and JS.
+                                    </p>
+                                    <div id="mp-c-imgbox">
+                                            <figure>
+                                                <img src="https://i.imgur.com/KfnSrYY.jpg" alt="original homepage">
+                                                <h4> Original Library Page</h4>
+                                            </figure>
+                                                <div class="evolution">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                                        width="50" height="50"
+                                                        viewBox="0 0 172 172"
+                                                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc"><path d="M86,30.96c-0.48375,0 -0.94062,0.12094 -1.3975,0.3225l-75.68,34.4c-1.22281,0.55094 -2.0425,1.77375 -2.0425,3.1175v20.64c0,1.16906 0.63156,2.27094 1.6125,2.9025c0.98094,0.63156 2.16344,0.69875 3.225,0.215l74.2825,-33.755l74.2825,33.755c0.45688,0.215 0.91375,0.3225 1.3975,0.3225c0.645,0 1.26313,-0.17469 1.8275,-0.5375c0.98094,-0.63156 1.6125,-1.73344 1.6125,-2.9025v-20.64c0,-1.34375 -0.80625,-2.56656 -2.0425,-3.1175l-75.68,-34.4c-0.45687,-0.20156 -0.91375,-0.3225 -1.3975,-0.3225zM86,79.12c-0.48375,0 -0.94062,0.12094 -1.3975,0.3225l-75.68,34.4c-1.22281,0.55094 -2.0425,1.76031 -2.0425,3.1175v20.64c0,1.16906 0.63156,2.27094 1.6125,2.9025c0.98094,0.63156 2.16344,0.71219 3.225,0.215l74.2825,-33.755l74.2825,33.755c0.45688,0.215 0.91375,0.3225 1.3975,0.3225c0.645,0 1.26313,-0.17469 1.8275,-0.5375c0.98094,-0.63156 1.6125,-1.73344 1.6125,-2.9025v-20.64c0,-1.35719 -0.80625,-2.56656 -2.0425,-3.1175l-75.68,-34.4c-0.45687,-0.20156 -0.91375,-0.3225 -1.3975,-0.3225z"></path></g></g></svg>
+                                                </div>
+                                            <figure>
+                                                <img src="img/brs.jpeg" alt="final homepage">
+                                                <h4>Final Library Page</h4>
+                                            </figure>   
+                                    </div>
+                                    <p>
+                                        Additionally, many simulation contents were produced such as commenting and rating, content of other kinds of reading spots(ex. bookstore, cafe), user profile page and library-host events content. 
+                                    </p>
+                                    <div>
+                                        <img src="img/simu1.png" alt="" class="simu-img">
+                                        <img src="img/simu2.png" alt="" class="simu-img">
+                                        <img src="img/simu3.jpeg" alt="" class="simu-img">
+                                        <img src="img/simu4.jpeg" alt="" class="simu-img">
+                                        <img src="img/simu5.png" alt="" class="simu-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-line">
+                                    <div class="b-line-left"></div>
+                                    <div class="b-line-right"></div>
+                                    <div class="float-clear"></div>
+                                </div>  
+                        </div>
+                        <div id="participation-and-journal-popup">
+                                <div class="popup-header">
+                                        <a href="portfolio.html" id="close-pop"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                        width="50" height="50"
+                                        viewBox="0 0 172 172"
+                                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="close-icon" fill="#00cccc"><path d="M52.03,42.2475l-9.7825,9.7825l34.185,33.97l-34.185,33.97l9.7825,9.7825l34.185,-33.97l34.185,33.97l9.675,-9.7825l-34.0775,-33.97l34.0775,-33.97l-9.675,-9.7825l-34.185,33.97z"></path></g></g></svg></a>
+                                        <h1>D E S I G N &nbsp&nbsp E X P L O R A T I O N</h1>
+                                        <div class="float-clear"></div>
+                                    </div>
+                                    <div class="top-line">
+                                        <div class="line-left"></div>
+                                        <div class="line-right"></div>
+                                    </div>    
+                                <div class="popup-content">
+                                    <div>
+                                        <!-- Referencing from https://www.jqueryscript.net/other/Interactive-Accessible-jQuery-Timeline-Plugin-Timeliner.html -->
+                                        <div id="timeline" class="timeline-container">
+
+                                            <button class="timeline-toggle">+ expand all</button>
+                                
+                                            <br class="clear">
+                                
+                                            <div class="timeline-wrapper">
+                                                <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 1</span></h2>
+                                                <dl class="timeline-series">
+                                                    <dt id="19540517" class="timeline-event"><a>COURSE BEGIN</a></dt>
+                                                    <dd class="timeline-event-content" id="19540517EX">
+                                                        <p>
+                                                            Investigate data.qld.gov.au and begin Design Exploration individually.
+                                                        </p>
+                                
+                                                            <br class="clear">
+                                                    </dd><!-- /.timeline-event-content -->
+                                                </dl><!-- /.timeline-series -->
+                                            </div><!-- /.timeline-wrapper -->
+                                
+                                            <div class="timeline-wrapper">
+                                                <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 2</span></h2>
+                                                <dl class="timeline-series">
+                                                    <dt id="19550828" class="timeline-event start-open"><a>GROUP DISCUSSION</a></dt>
+                                                    <dd class="timeline-event-content" id="19550828EX">
+                                
+                                                        <div class="media">
+                                                            <div class="flex">
+                                                                <img src="https://i.imgur.com/AzLzJhR.jpg" width="240" height="180" alt="note1">
+                                                                <img src="https://i.imgur.com/9fOzdWA.jpg" width="240" height="180" alt="note2">
+                                                            </div>
+                                                            
+                                                            <p class="mediaLink after-flex">Group Discussion Note</p>
+                                                            
+                                                        </div><!-- /.media -->
+                                
+                                                        <p>
+                                                            I thought out various ideas based on SLQ dataset. In the group discussion in Contact, these ideas were deeply investigated and some difficulties were came up.    
+                                                        </p>                                
+                                                            <br class="clear">
+                                                    </dd><!-- /.timeline-event-content -->
+                                                </dl><!-- /.timeline-series -->
+                                            </div><!-- /.timeline-wrapper -->
+                                
+                                            <div class="timeline-wrapper">
+                                                <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 3</span></h2>
+                                                <dl class="timeline-series">
+                                                    <dt id="19570904" class="timeline-event start-open"><a>Six Hat Activity</a></dt>
+                                                    <dd class="timeline-event-content" id="19570904EX">
+                                
+                                                        <p>
+                                                            We had six hat activity in this week, my design exploration idea was discussed from the aspects of research difficulty, target audience and potential expansion content. Finally, the target audience had been narrowed in young adults.
+                                                        </p>
+                                
+                                                        <br class="clear">
+                                                    </dd><!-- /.timeline-event-content -->
+                                                </dl><!-- /.timeline-series -->
+                                            </div><!-- /.timeline-wrapper -->
+                                
+                                            <div class="timeline-wrapper">
+                                                <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 4</span></h2>
+                                                <dl class="timeline-series">
+                                                    <dt id="19610504" class="timeline-event"><a>Low Fidelity Prototype</a></dt>
+                                                    <dd class="timeline-event-content" id="19610504EX">
+                                
+                                                    <p>
+                                                        I decided the two main interactions of my aboriginal-language-related idea, one is the language encryption system while the other is the sticker generator. I referenced some existing online editors and dictionaries, low fidelity prototypes were designed in this week.(See Design Exploration)
+                                                    </p>
+                                                        <br class="clear">
+                                                    </dd><!-- /.timeline-event-content -->
+                                                </dl><!-- /.timeline-series -->
+                                            </div><!-- /.timeline-wrapper -->
+                                
+                                            <div class="timeline-wrapper">
+                                                <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 5</span></h2>
+                                                <dl class="timeline-series">
+                                                    <dt id="19630828" class="timeline-event"><a>Individual Pitch</a></dt>
+                                                    <dd class="timeline-event-content" id="19630828EX">
+                                                                                       
+                                                        <p>
+                                                            I finished the poster of my design exploration idea and had pitch on workshop, I referenced aboriginal pattern and designed my poster. It was special but personally I thought it lacked some visual materials such as the prototype. 
+                                                        </p>
+                                
+                                                        <br class="clear">
+                                                    </dd><!-- /.timeline-event-content -->
+                                                </dl><!-- /.timeline-series -->
+                                            </div><!-- /.timeline-wrapper -->
+                                
+                                            <div class="timeline-wrapper">
+                                                <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 6</span></h2>
+                                                <dl class="timeline-series">
+                                                    <dt id="19640702" class="timeline-event"><a>Group Formation</a></dt>
+                                                    <dd class="timeline-event-content" id="19640702EX">
+                                                        <p>
+                                                            This week, we began our team project. Our group selected Public Libraries dataset as our main data source. We planned to develop a mobile-sized website to assist reading lovers to find confortable reading spots. We distributed work and set weekly meeting time. At the end of this week, we clarified our website's purpose.
+                                                        </p>
+                                                        <br class="clear">
+                                                    </dd><!-- /.timeline-event-content -->
+                                                </dl><!-- /.timeline-series -->
+                                            </div><!-- /.timeline-wrapper -->
+
+                                            <div class="timeline-wrapper">
+                                                    <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 7</span></h2>
+                                                    <dl class="timeline-series">
+                                                        <dt id="19640702" class="timeline-event"><a>Proposal</a></dt>
+                                                        <dd class="timeline-event-content" id="19640702EX">
+                                                            <p>
+                                                               At week7, we began our proposal. During this week's contact and grouping, our major achievement was discovering the difficulty in implementing API. Initially we want to use data from more than one API for our websites, but unique access ids were required for various APIs. As a result, we came up with two method. The first method was to implement a database to store all the data from different APIs. The challenge of this method was that none of us  knew how to apply a database in our web especially when we were pressed for time. The other method was making simulated content for what we could not acquire substantially from APIs except SLQ's. This method was easy to achieve so we set the simulation content as our MVP.
+                                                            </p>
+                                                            <br class="clear">
+                                                        </dd><!-- /.timeline-event-content -->
+                                                    </dl><!-- /.timeline-series -->
+                                                </div><!-- /.timeline-wrapper -->
+                                                
+                                                <div class="timeline-wrapper">
+                                                        <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 8<br>W E E K 9</span></h2>
+                                                        <dl class="timeline-series">
+                                                            <dt id="19640702" class="timeline-event"><a>Demo & Test Plan</a></dt>
+                                                            <dd class="timeline-event-content" id="19640702EX">
+                                                                <p>
+                                                                   In this 2 weeks, we were working for 2 aspects. Coders focused on achieving main functions such as retrieving wanted data from our implemented dataset through narrowing search range and input keywords, filtering user's choice when user clicked a specific library button and acquiring user's GPS location. Designers set a series of test plan for our demo version. At the end of this two weeks, we showed our demo on contact. Although the aesthetic was not good, the main function was basically achieved.
+                                                                </p>
+                                                                <br class="clear">
+                                                            </dd><!-- /.timeline-event-content -->
+                                                        </dl><!-- /.timeline-series -->
+                                                    </div><!-- /.timeline-wrapper -->
+
+                                                <div class="timeline-wrapper">
+                                                        <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 10<br>W E E K 11<br>W E E K 12</span></h2>
+                                                        <dl class="timeline-series">
+                                                            <dt id="19640702" class="timeline-event"><a>Developing</a></dt>
+                                                            <dd class="timeline-event-content" id="19640702EX">
+                                                                <p>
+                                                                   This three week is the final period before the trade show. We enfroced our main functions, especially I worked out PHP Session so that users could jump to the specific library pages they selected from search page. At this stage, we tried using Git to manage our project. However, because of our faulty operation, we caused conflict in branches. Because of time constraint, we didn't fix that so we finally gave up. But whatever, we found that Git was useful and I am going to learn it deeply in the future. 
+                                                                </p>
+                                                                <p>
+                                                                    At week 12, we began to decorate our website and make simulation content. We didn't use many plugins which resulted that our interaction style was not so cool as I expected. But whatever, we made big effort to finish our website, it is functional and looks like a practical place-recommendation website.
+                                                                </p>
+                                                                <br class="clear">
+                                                            </dd><!-- /.timeline-event-content -->
+                                                        </dl><!-- /.timeline-series -->
+                                                    </div><!-- /.timeline-wrapper -->
+
+                                                <div class="timeline-wrapper">
+                                                        <h2 class="timeline-time button button--ujarak button--border-thin button--text-thick"><span>W E E K 13</span></h2>
+                                                        <dl class="timeline-series">
+                                                            <dt id="19640702" class="timeline-event"><a>Trade Show</a></dt>
+                                                            <dd class="timeline-event-content" id="19640702EX">
+                                                                <p>
+                                                                   This is the ending of our major project. Since we made big effort on this project, we all felt a sense of achievement when we finally presented our work to the audiences. Comparing with the team which made games, our website was not very attractive on the first sight, but I still believe it is a practical website especially for reading lovers.
+                                                                </p>
+                                                                <p>
+                                                                    However, it is undeniable that we still have lots of aspects to improve. Firstly, if we could try to implement more plugins, our web's interaction would be more perfect and our development would be easier. I realised this point when I was making this portfolio. Secondly, when we introduced our website to the audiences, we should firstly emphasis our target audiences. Actually, as for our website, our target audiences are not refered to a group people with certain age but with certain hobby, which results that it would be harder for normal audiences to imagine themselves as our target audiences so that they might be confuse about our project's purpose.
+                                                                </p>
+                                                                <br class="clear">
+                                                            </dd><!-- /.timeline-event-content -->
+                                                        </dl><!-- /.timeline-series -->
+                                                    </div><!-- /.timeline-wrapper -->
+                                            <br class="clear">
+                                        </div><!-- /#timelineContainer -->
+                                    </div>
+                                </div>
+                                <div class="bottom-line">
+                                        <div class="b-line-left"></div>
+                                        <div class="b-line-right"></div>
+                                        <div class="float-clear"></div>
+                                </div>  
+                                
+                            </div>
+                            <div id="portfolio-content-popup">
+                                    <div class="popup-header">
+                                            <a href="portfolio.html" id="close-pop"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                            width="50" height="50"
+                                            viewBox="0 0 172 172"
+                                            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="close-icon" fill="#00cccc"><path d="M52.03,42.2475l-9.7825,9.7825l34.185,33.97l-34.185,33.97l9.7825,9.7825l34.185,-33.97l34.185,33.97l9.675,-9.7825l-34.0775,-33.97l34.0775,-33.97l-9.675,-9.7825l-34.185,33.97z"></path></g></g></svg></a>
+                                            <h1>P O R T F O L I O</h1>
+                                            <div class="float-clear"></div>
+                                        </div>
+                                        <div class="top-line">
+                                            <div class="line-left"></div>
+                                            <div class="line-right"></div>
+                                        </div>    
+                                    <div class="popup-content">
+                                        <div class="float-left no-margin">
+                                            <img src="img/portfolio.jpeg" alt="portfolio" id="pc-pop-img1">
+                                        </div>
+                                        <div class="float-right">
+                                            <p>
+                                                I implement Cyberpunk design style on this website. Since it is a website about myself, I want to use my favourite style. I have referenced many sci-fi design style and elements on Pinterest. From my aspect, the significant point to achieve this style is to add some dynamic elements. The reason for that is this style is a simulation of the AI interface in sci-fi works, so it emphasis the interaction between human and computer. 
+                                            </p>
+                                            <iframe width="100%" height="300px" src="https://www.youtube.com/embed/P5k-4-OEuTk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p>
+                                                I add many interaction plugins on my website. Although these interactions are not quite functional because they have no practical function as people imagined in sci-fi works, I still think they are very interesting. This website is a record of my experience in DECO7180, and also, it is a practical for me to create a computer work in my favourite style.
+                                            </p>
+                                        </div>
+                                        <div class="float-clear"></div>
+                                    </div>
+                                    <div class="bottom-line">
+                                            <div class="b-line-left"></div>
+                                            <div class="b-line-right"></div>
+                                            <div class="float-clear"></div>
+                                        </div>  
+                                    
+                                </div>
+                </div>
+                <div class="nextpage">
+                        <a href="#course-reflection">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="70" height="70"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc" class="next-icon"><path d="M31.99805,29.0306l-10.24609,10.02214l64.23405,65.5638l64.24805,-65.21387l-10.2181,-10.05013l-54.00195,54.8138zM140.07194,71.06478l-54.11393,53.80599l-54.07194,-52.95215l-10.02214,10.2461l64.17806,62.84831l64.13607,-63.78614z"></path></g></g></svg>
+                        </a>
+                    </div>
+            </section>
+            <section id="course-reflection">
+                <h1 id="course-title">C O U R S E &nbsp&nbsp R E F L E C T I O N</h1>
+                <!-- Referencing from https://www.jqueryscript.net/slideshow/Responsive-Image-Cover-Flow-Plugin-with-jQuery-CSS3-flipster.html -->
+                <div class="my-flipster">
+                    <ul>
+                      <li>
+                          <div class="flip-div">
+                            <div class="flip-top-line">
+                                <div class="flip-line-left"></div>
+                                <div class="flip-line-right"></div>
+                            </div>
+                            <div class="flip-content">
+                                <h2 class="popup-subtitle flip-text">I N I T I A L &nbsp&nbsp E X P E C T I O N</h2>
+                                <p class="flip-text">
+                                        I understood that interaction is very important for a computing project. However, before having this course, the interactions I could add on my website were only some buttons or expand links for displaying hidden content. In fact, for a mature project, it should have interaction with external data and can react when data changes. So I hope that I can learn something which is related to both front end and back end. According to this course’s outline, I found we will learn AJAX, API and PHP in this course, which are known as the coding language in rendering and  achieving information exchange. From my aspect, although I will always be attracted by beautiful interface and interesting hover style when I use a website or an application, the reason makes me to be a loyal user is the information and feeling it provides me. So, I believe learning how to implement large amount of information in a website is very practical.
+                                </p>
+                                
+                            </div>
+                            <div class="flip-bottom-line">
+                                <div class="flip-b-line-left"></div>
+                                <div class="flip-b-line-right"></div>
+                                <div class="float-clear"></div>
+                            </div>
+                          </div>
+                      </li>
+                      <li>
+                            <div class="flip-div">
+                                    <div class="flip-top-line">
+                                            <div class="flip-line-left"></div>
+                                            <div class="flip-line-right"></div>
+                                        </div>
+                                        <div class="flip-content flip-img-box">
+                                            <h2 class="popup-subtitle flip-text">T E A M W O R K</h2>
+                                            <img src="img/team.jpeg" alt="team photo" class="flip-img">
+                                        </div>
+                                        <div class="flip-bottom-line">
+                                            <div class="flip-b-line-left"></div>
+                                            <div class="flip-b-line-right"></div>
+                                            <div class="float-clear"></div>
+                                        </div>
+                            </div>
+                        </li>
+                      <li>
+                        <div class="flip-div">
+                                <div class="flip-top-line">
+                                        <div class="flip-line-left"></div>
+                                        <div class="flip-line-right"></div>
+                                    </div>
+                                    <div class="flip-content">
+                                        <h2 class="popup-subtitle flip-text">T E A M W O R K</h2>
+                                        <p class="flip-text">
+                                            Team work is also a vital part of this course. There are two sides working as a team. First, let us discuss its benefits. In a team, you can share the workload for the entire team, which can increase work productivity and quality if team members work well together. The challenging part of teamwork includes conflicts and balance of workload. If the leader didn’t keep the balance of workload between team members, the people who did little would feel left out sometimes. Also, everyone has their ideas; at this time, the team needs a process of consultation, mutual accommodation, and consensus. Besides, we also need to build trust together, define roles clearly, and respect individually.
+                                        </p>
+                                        <p class="flip-text">
+                                            I am glad that our team works well, we considered individual’s skills to distribute works so finally we finished our MVP, achieving both functionality and aesthetics on our project.
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="flip-bottom-line">
+                                        <div class="flip-b-line-left"></div>
+                                        <div class="flip-b-line-right"></div>
+                                        <div class="float-clear"></div>
+                                    </div>
+                        </div>
+                    </li>
+                    <li>
+                            <div class="flip-div">
+                                    <div class="flip-top-line">
+                                            <div class="flip-line-left"></div>
+                                            <div class="flip-line-right"></div>
+                                        </div>
+                                        <div class="flip-content">
+                                            <h2 class="popup-subtitle flip-text">T E A M W O R K</h2>
+                                            <p class="flip-text">
+                                                We had conference regularly every week to discuss our current progress and our team leader would allocate individual's work for the next week. Our team staffing are 3 IT student with 1 ID students and our clear division of work are benefit by this. Initially, designer designed the prototypes and guide interaction session. Actually, designer came up the idea of human-computer interaction while we other guys focused on information interaction. From my perspective, a good web should combine both information interaction and human-computer interaction. Because in most cases, users use website to acquire new information which may benefit their life and work, or just for leisure purpose. But whatever, firstly they need to be comfortable with operating on this websites which includes good interface and clear navigation structure. After that, once user adapt to the operation, they need to get something practical from the website. In order to achieve, the information should be easy and fast to be accessed.
+                                            </p>
+                                        </div>
+                                        <div class="flip-bottom-line">
+                                            <div class="flip-b-line-left"></div>
+                                            <div class="flip-b-line-right"></div>
+                                            <div class="float-clear"></div>
+                                        </div>
+                            </div>
+                        </li>
+                        <li>
+                                <div class="flip-div">
+                                        <div class="flip-top-line">
+                                                <div class="flip-line-left"></div>
+                                                <div class="flip-line-right"></div>
+                                            </div>
+                                            <div class="flip-content flip-img-box">
+                                                <h2 class="popup-subtitle flip-text">S I X &nbsp&nbsp H A T &nbsp&nbsp A C T I V I T Y</h2>
+                                                <img src="img/sixhat.jpeg" alt="Six Hat" class="flip-img">
+                                            </div>
+                                            <div class="flip-bottom-line">
+                                                <div class="flip-b-line-left"></div>
+                                                <div class="flip-b-line-right"></div>
+                                                <div class="float-clear"></div>
+                                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="flip-div">
+                                            <div class="flip-top-line">
+                                                    <div class="flip-line-left"></div>
+                                                    <div class="flip-line-right"></div>
+                                                </div>
+                                                <div class="flip-content">
+                                                    <h2 class="popup-subtitle flip-text">S I X &nbsp&nbsp H A T &nbsp&nbsp A C T I V I T Y</h2>
+                                                    <p class="flip-text">
+                                                        Six Hat activities leaded us to take our idea of Design Exploration in different aspects of consideration. As for my idea, the aboriginal language encryption system, in the black hat discussion, a difficulty came up that the aboriginal culture is minority so that target audience should be thought carefully. While in red hat discussion, my idea was supposed to be implemented in entertainment, which was why I came up with the idea of Sticker Generator. Then, in white hat discussion, I was suggested to combine aboriginal languages with their culture, so that the content of this project would be enriched.
+                                                    </p>
+                                                    <p class="flip-text">
+                                                        It is undeniable that Six Hat is really a good way to extend and specify a topic through group discussion. Actually before doing this activity, I knew that this topic was necessary to be dug deeper, but I didn't know the actual directions. So in my future work, I will use this method to guide my exploration.
+                                                    </p>
+                                                </div>
+                                                <div class="flip-bottom-line">
+                                                    <div class="flip-b-line-left"></div>
+                                                    <div class="flip-b-line-right"></div>
+                                                    <div class="float-clear"></div>
+                                                </div>
+                                    </div>
+                                </li>
+                    </ul>
+                  </div>
+                <div class="nextpage">
+                        <a href="#other-work">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="70" height="70"
+                                viewBox="0 0 172 172"
+                                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#00cccc" class="next-icon"><path d="M31.99805,29.0306l-10.24609,10.02214l64.23405,65.5638l64.24805,-65.21387l-10.2181,-10.05013l-54.00195,54.8138zM140.07194,71.06478l-54.11393,53.80599l-54.07194,-52.95215l-10.02214,10.2461l64.17806,62.84831l64.13607,-63.78614z"></path></g></g></svg>
+                        </a>
+                    </div>
+            </section>
+            <section id="other-work">
+                <div id="ow-title-box">
+                        <h1 id="ow-title">O T H E R &nbsp&nbsp W O R K</h1>
+                        <h2 id="ow-subtitle">T H E &nbsp&nbsp W A N D E R I N G &nbsp&nbsp E A R T H &nbsp&nbsp S U R V I V A L &nbsp&nbsp G U I D E</h2>
+                    </div>    
+                <div id="other-work-content">
+                    
+                    
+                    <div class="float-left">
+                        <p>
+                            This is my final work in DECO7140 last semester. I have chosen the popular Chinese science fiction The Wandering Earth as my theme to introduce users the knowledge of various disasters the survival methods under the circumstance of these disasters. 
+                        </p>
+                        <p>
+                            Because of the website's theme, I also implemented a similar style as this portfolio. Although there were many simulation content and function in The Wandering Earth Survival Guide, it was my first complete web work and also my first time to implement my favourite design style into practical. So whatever, this website is a very important milestone in my IT learning process. 
+                        </p>
+                        <p>
+                            Actually, for everytime I did DECO course works, I would try to use some new knowledge I learned in the course even if they were very difficult at first. I believe only in this way, I can make breakthroughs in my individual development.
+                        </p>
+                        <a href="https://github.com/zavier250/The-Wandering-Earth.git" id="ow-link">Have a look at The Wandering Earth in Git</a>
+                    </div>
+                    <div class="float-right">
+                        <a href="twe.html" id="ow-button">
+                            <img src="img/TWE-cover.jpeg" alt="The Wandering Earth index" class="ow-img">
+                        </a>
+                        
+                    </div>
+                    <div class="float-clear"></div>
+                    <div id="twe-popup">
+                            <div class="popup-header">
+                                    <a href="portfolio.html" id="close-pop"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="50" height="50"
+                                    viewBox="0 0 172 172"
+                                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="close-icon" fill="#00cccc"><path d="M52.03,42.2475l-9.7825,9.7825l34.185,33.97l-34.185,33.97l9.7825,9.7825l34.185,-33.97l34.185,33.97l9.675,-9.7825l-34.0775,-33.97l34.0775,-33.97l-9.675,-9.7825l-34.185,33.97z"></path></g></g></svg></a>
+                                    <h1>G A L L A R Y</h1>
+                                    <div class="float-clear"></div>
+                            </div>
+                            <div class="top-line">
+                                    <div class="line-left"></div>
+                                    <div class="line-right"></div>
+                                </div>   
+                            <div>
+                                <!-- Referencing from https://www.jqueryscript.net/slider/Responsive-Thumbnail-Carousel-camRoll-Slider.html -->
+                                <div class="container">
+                                    <div id="my-slider" class="crs-wrap">
+                                      <div class="crs-screen">
+                                        <div class="crs-screen-roll">
+                                          <div class="crs-screen-item">
+                                            <div class="crs-screen-item-content">
+                                                <img src="img/TWE-cover.jpeg" alt="">
+                                            </div>
+                                          </div>
+                                          <div class="crs-screen-item">
+                                            <div class="crs-screen-item-content">
+                                                <img src="img/Story.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crs-screen-item">
+                                            <div class="crs-screen-item-content">
+                                                <img src="img/tsunami.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crs-screen-item">
+                                            <div class="crs-screen-item-content">
+                                                <img src="img/volcano.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crs-screen-item">
+                                            <div class="crs-screen-item-content">
+                                                <img src="img/extreme-weather.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="crs-screen-item">
+                                            <div class="crs-screen-item-content">
+                                                <img src="img/world-distribution.png" alt="">
+                                            </div>
+                                        </div>
+                                        </div>
+                                      </div>
+                                      <div class="crs-bar">
+                                        <div class="crs-bar-roll-current"></div>
+                                        <div class="crs-bar-roll-wrap">
+                                          <div class="crs-bar-roll">
+                                            <div class="crs-bar-roll-item" style="background-image: url('img/TWE-cover.jpeg')"></div>
+                                            <div class="crs-bar-roll-item" style="background-image: url('img/Story.png')"></div>
+                                            <div class="crs-bar-roll-item" style="background-image: url('img/tsunami.png')"></div>
+                                            <div class="crs-bar-roll-item" style="background-image: url('img/volcano.png')"></div>
+                                            <div class="crs-bar-roll-item" style="background-image: url('img/extreme-weather.png')"></div>
+                                            <div class="crs-bar-roll-item" style="background-image: url('img/world-distribution.png')"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="bottom-line">
+                                    <div class="b-line-left"></div>
+                                    <div class="b-line-right"></div>
+                                    <div class="float-clear"></div>
+                            </div>  
+                    </div>
+
+                </div>
+                
+            </section>
+        </div>
+        <!-- <section id="cover">
+            <img src="img/cover1.png" alt="" id="cover-img">
+            <div id="cover-content">
+                <h1 id="cover-title">Z.A.V.I.E.R</h1>
+                <h2>P O R T F O L I O</h2>
+            </div>
+            <div id="cover-button">
+                <button class="button button--ujarak button--border-thin button--text-thick">Explore</button>
+            </div>
+            <div class="float-clear"></div>
+        </section> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Referencing from https://tympanus.net/Development/AnimatedHeaderBackgrounds/ -->
+    <script src="js/pointAnim.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- Referencing from https://www.jqueryscript.net/slideshow/Responsive-Image-Cover-Flow-Plugin-with-jQuery-CSS3-flipster.html -->
+    <script src="js/jquery.flipster.min.js"></script>
+    <!-- Referencing from https://www.jqueryscript.net/slider/Responsive-Thumbnail-Carousel-camRoll-Slider.html -->
+    <script src="js/camroll_slider.js"></script>
+    <script src="js/timeliner.js"></script>
+    <script>
+        $("#my-slider").camRollSlider();
+    </script>
+    <!-- Referencing from https://www.jqueryscript.net/slideshow/Responsive-Image-Cover-Flow-Plugin-with-jQuery-CSS3-flipster.html -->
+    <script>
+        // $('.my-flipster').flipster();
+        $('.my-flipster').flipster({
+    itemContainer: 'ul',
+    // [string|object]
+    // Selector for the container of the flippin' items.
+
+    itemSelector: 'li',
+    // [string|object]
+    // Selector for children of `itemContainer` to flip
+
+    start: 'center',
+    // ['center'|number]
+    // Zero based index of the starting item, or use 'center' to start in the middle
+
+    fadeIn: 400,
+    // [milliseconds]
+    // Speed of the fade in animation after items have been setup
+
+    loop: false,
+    // [true|false]
+    // Loop around when the start or end is reached
+
+    autoplay: false,
+    // [false|milliseconds]
+    // If a positive number, Flipster will automatically advance to next item after that number of milliseconds
+
+    pauseOnHover: true,
+    // [true|false]
+    // If true, autoplay advancement will pause when Flipster is hovered
+
+    style: 'coverflow',
+    // [coverflow|carousel|flat|...]
+    // Adds a class (e.g. flipster--coverflow) to the flipster element to switch between display styles
+    // Create your own theme in CSS and use this setting to have Flipster add the custom class
+
+    spacing: -0.6,
+    // [number]
+    // Space between items relative to each item's width. 0 for no spacing, negative values to overlap
+
+    click: true,
+    // [true|false]
+    // Clicking an item switches to that item
+
+    keyboard: true,
+    // [true|false]
+    // Enable left/right arrow navigation
+
+    scrollwheel: true,
+    // [true|false]
+    // Enable mousewheel/trackpad navigation; up/left = previous, down/right = next
+
+    touch: true,
+    // [true|false]
+    // Enable swipe navigation for touch devices
+
+    nav: false,
+    // [true|false|'before'|'after']
+    // If not false, Flipster will build an unordered list of the items
+    // Values true or 'before' will insert the navigation before the items, 'after' will append the navigation after the items
+
+    buttons: false,
+    // [true|false|'custom']
+    // If true, Flipster will insert Previous / Next buttons with SVG arrows
+    // If 'custom', Flipster will not insert the arrows and will instead use the values of `buttonPrev` and `buttonNext`
+
+    buttonPrev: 'Previous',
+    // [text|html]
+    // Changes the text for the Previous button
+
+    buttonNext: 'Next',
+    // [text|html]
+    // Changes the text for the Next button
+
+    onItemSwitch: false
+    // [function]
+    // Callback function when items are switched
+    // Arguments received: [currentItem, previousItem]
+});
+var myFlipster = $('.my-flipster').flipster(); // It's best to store the element as a variable for easy reference.
+
+myFlipster.flipster('next'); // Next item
+myFlipster.flipster('prev'); // Previous item
+myFlipster.flipster('jump', 0); // Jump to a specific index
+myFlipster.flipster('jump', $('.my-item')); // Jump to a specific item
+myFlipster.flipster('play'); // Resume autoplay
+myFlipster.flipster('play', 5000); // Set autoplay duration
+myFlipster.flipster('pause'); // Pause the autoplay until next jump
+myFlipster.flipster('stop'); // Stop the autoplay entirely
+myFlipster.flipster('index'); // If items are added or removed, you can tell Flipster to reindex 
+    </script>
+    </body>
+    
+</html>
